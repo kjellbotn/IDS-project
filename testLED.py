@@ -1,19 +1,19 @@
 import time
 import RPi.GPIO as GPIO
-LED-r = 5
-LED-g = 22
+LEDr = 5
+LEDg = 22
 
 GPIO.setmode (GPIO.BCM)
-GPIO.setup (LED-r, GPIO.OUT)
-GPIO.setup (LED-g, GPIO.OUT)
+GPIO.setup (LEDr, GPIO.OUT)
+GPIO.setup (LEDg, GPIO.OUT)
 
 
 def flash (t):
-  GPIO.output(LED-r, True)
-  GPIO.output (LED-g, False)
+  GPIO.output(LEDr, True)
+  GPIO.output (LEDg, False)
   time.sleep(1)
-  GPIO.output(LED-r, False)
-  GPIO.output(LED-g, True)
+  GPIO.output(LEDr, False)
+  GPIO.output(LEDg, True)
   time.sleep(1)
 
 try:
