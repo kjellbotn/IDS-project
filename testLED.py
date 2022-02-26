@@ -10,6 +10,7 @@ GPIO.setup (LEDg, GPIO.OUT) #identifies as output
 GPIO.setup(BUTTON, GPIO.IN) # knows to read input from button
 ON = False
 
+
 def flash (t):
   GPIO.output(LEDr, True)
   GPIO.output (LEDg, False)
@@ -34,9 +35,10 @@ if GPIO.input(BUTTON) == True:
   GPIO.output (LEDg, False)
   GPIO.output (LEDr, False)
 
-try:
+else:
   while True:
     flash(1)
-   
+
+  
 finally:
   GPIO.cleanup()
