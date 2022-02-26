@@ -7,12 +7,9 @@ GPIO.setup (LED, GPIO.OUT)
 
 def flash (t):
   GPIO.output(LED, True)
-  time.sleep (t)
-  GPIO.output(LED, False)
-  time.sleep(t)
 
 try:
   while True:
-   flash(0.5)
+   flash()
 finally:
   GPIO.cleanup()
