@@ -35,8 +35,7 @@ try:
   while GPIO.input(BUTTON) == False:
     GPIO.output (LEDg, False)
     GPIO.output (LEDr, False)
-    else:
-      while True:
-        flash (1)
+  while True:
+    flash (1)
 finally:
   GPIO.cleanup()
