@@ -10,6 +10,7 @@ def flash (t):
 
 try:
   while True:
-   flash()
+    flash(1)
+   
 finally:
   GPIO.cleanup()
