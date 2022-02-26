@@ -12,6 +12,9 @@ def flash (t):
   GPIO.output(LEDr, True)
   GPIO.output (LEDg, False)
   time.sleep(1)
+  GPIO.output (LEDr, False)
+  GPIO.output (LEDg, False)
+  time.sleep(0.5)
   GPIO.output(LEDr, True)
   GPIO.output (LEDg, False)
   time.sleep(1)
@@ -19,8 +22,12 @@ def flash (t):
   GPIO.output(LEDg, True)
   time.sleep(1)
   GPIO.output(LEDr, False)
+  GPIO.output(LEDg, False)
+  time.sleep(0.5)
+  GPIO.output(LEDr, False)
   GPIO.output(LEDg, True)
   time.sleep(1)
+  
 
 try:
   while True:
