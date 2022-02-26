@@ -4,13 +4,11 @@ LEDr = 5
 LEDg = 22
 BUTTON = 20
 
-GPIO.setmode (GPIO.BCM)
+GPIO.setmode (GPIO.BCM) #makes pin numbers accurate
 GPIO.setup (LEDr, GPIO.OUT)
-GPIO.setup (LEDg, GPIO.OUT)
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(BUTTON, GPIO.IN)
+GPIO.setup (LEDg, GPIO.OUT) #identifies as output
+GPIO.setup(BUTTON, GPIO.IN) # knows to read input from button
 ON = False
-display.setup(GPIO, LEDr, LEDg, ON)
 
 def flash (t):
   GPIO.output(LEDr, True)
@@ -32,7 +30,7 @@ def flash (t):
   GPIO.output(LEDg, True)
   time.sleep(1)
 
-if BUTTON = ON:
+if GPIO.input(BUTTON) == False:
   GPIO.output (LEDg, False)
   GPIO.output (LEDr, False)
 
