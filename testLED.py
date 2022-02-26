@@ -32,10 +32,11 @@ def flash (t):
   time.sleep(1)
 
 try:
-  while GPIO.input(BUTTON) == False:
-    GPIO.output (LEDg, False)
-    GPIO.output (LEDr, False)
   while True:
     flash (1)
+    
+    while GPIO.input(BUTTON) == True:
+      GPIO.output (LEDg, False)
+      GPIO.output (LEDr, False)
 finally:
   GPIO.cleanup()
