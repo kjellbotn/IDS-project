@@ -12,7 +12,7 @@ def flash (t):
   time.sleep(t)
 
 try:
-  while True
+  while True:
    flash(0.5)
 finally:
   GPIO.cleanup()
