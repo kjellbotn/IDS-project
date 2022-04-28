@@ -21,6 +21,11 @@ while True:
             pygame.quit()
             sys.exit()
 
+        if(event.type == pygame.KEYDOWN):
+            if(event.key == pygame.K_ESCAPE):
+                pygame.quit()
+                sys.exit()
+
     pygame.display.update()
 
     time.sleep(0.01)
