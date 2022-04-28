@@ -21,4 +21,6 @@ while True:
             pygame.quit()
             sys.exit()
 
+    screen.update()
+
     time.sleep(0.01)
