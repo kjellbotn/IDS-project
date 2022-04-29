@@ -7,7 +7,7 @@ import pygame
 pygame.init()
 
 #sets up a display for pygame to use
-screen = pygame.display.set_mode((1920, 1080))
+screen = pygame.display.set_mode((300, 200))
 pygame.display.set_caption("Caption?")
 pygame.display.toggle_fullscreen()
 
