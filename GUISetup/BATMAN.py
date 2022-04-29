@@ -9,8 +9,13 @@ pygame.init()
 #reads current desktop size
 screenInfo = pygame.display.Info()
 
+screenSize = (screenInfo.current_w, screenInfo.current_w)
+
 #sets the screensize to the size of the first desktop
-screen = pygame.display.set_mode((screenInfo.current_w, screenInfo.current_w))
+screen = pygame.display.set_mode(screenSize)
+
+#creates a surface to draw the display data onto
+DrawSurf = pygame.Surface((1920, 1080))
 
 #adds a title for the window
 pygame.display.set_caption("Caption?")
@@ -41,10 +46,12 @@ while True:
                 sys.exit()
 
     #makes the background black
-    screen.fill((0, 0, 0))
+    DrawSurf.fill((0, 0, 0))
 
     #draws the batsignal
-    screen.blit(BatSignal, (0, 0))
+    DrawSurf.blit(BatSignal, (0, 0))
+
+    screen.blit(pygame.transform.scale(DrawSurf, screenSize))
 
     #updates the display
     pygame.display.update()
