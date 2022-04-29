@@ -7,9 +7,8 @@ import pygame
 pygame.init()
 
 #sets up a display for pygame to use
-screen = pygame.display.set_mode((1920, 1080))
+screen = pygame.display.set_mode((1920, 1080), pygame.FULLSCREEN);
 pygame.display.set_caption("Caption?")
-pygame.display.set_fullscreen(True)
 
 #reads the batsignal image from file "BatSignal.png"
 BatSignal = pygame.image.load("BatSignal.png")
