@@ -9,7 +9,7 @@ pygame.init()
 #reads current desktop size
 screenInfo = pygame.display.Info()
 
-screenSize = (screenInfo.current_w, screenInfo.current_w)
+screenSize = (screenInfo.current_w, screenInfo.current_h)
 
 #sets the screensize to the size of the first desktop
 screen = pygame.display.set_mode(screenSize)
