@@ -51,7 +51,7 @@ while True:
     #draws the batsignal
     DrawSurf.blit(BatSignal, (0, 0))
 
-    screen.blit(pygame.transform.scale(DrawSurf, screenSize))
+    screen.blit(pygame.transform.scale(DrawSurf, screenSize), (0, 0))
 
     #updates the display
     pygame.display.update()
