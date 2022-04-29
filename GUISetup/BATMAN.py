@@ -7,10 +7,10 @@ import pygame
 pygame.init()
 
 #reads current desktop size
-sizes = pygame.display.get_desktop_sizes()
+screenInfo = pygame.display.Info()
 
 #sets the screensize to the size of the first desktop
-screen = pygame.display.set_mode(sizes[0])
+screen = pygame.display.set_mode((screenInfo.current_w, screenInfo.current_w))
 
 #adds a title for the window
 pygame.display.set_caption("Caption?")
