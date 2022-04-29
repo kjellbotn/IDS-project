@@ -9,6 +9,7 @@ pygame.init()
 #reads current desktop size
 screenInfo = pygame.display.Info()
 
+#stores the screen size for later
 screenSize = (screenInfo.current_w, screenInfo.current_h)
 
 #sets the screensize to the size of the first desktop
@@ -51,6 +52,7 @@ while True:
     #draws the batsignal
     DrawSurf.blit(BatSignal, (0, 0))
 
+    #draws the buffered dispaly to the screen after resizing it
     screen.blit(pygame.transform.scale(DrawSurf, screenSize), (0, 0))
 
     #updates the display
