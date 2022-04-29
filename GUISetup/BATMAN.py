@@ -6,9 +6,16 @@ import pygame
 #initiates pygame
 pygame.init()
 
-#sets up a display for pygame to use
-screen = pygame.display.set_mode((300, 200))
+#reads current desktop size
+sizes = pygame.display.get_desktop_sizes()
+
+#sets the screensize to the size of the first desktop
+screen = pygame.display.set_mode(sizes[0])
+
+#adds a title for the window
 pygame.display.set_caption("Caption?")
+
+#enables fullscreen
 pygame.display.toggle_fullscreen()
 
 #reads the batsignal image from file "BatSignal.png"
