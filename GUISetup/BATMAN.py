@@ -31,7 +31,7 @@ DrawSurf = pygame.Surface((1920, 1080))
 #generates a phont to write text with
 #best p052
 #font = pygame.font.SysFont("omni10", 35);
-font = pygame.font.Font("Qdbettercomicsans-jEEeG.ttf", 35)
+font = pygame.font.Font("Qdbettercomicsans-jEEeG.ttf", 70)
 
 #adds a title for the window
 pygame.display.set_caption("Caption?")
@@ -116,10 +116,10 @@ while True:
         DrawSurf.blit(font.render(temp, True, (255, 255, 255)), (0, 0))
 
         #writes the current pressure display
-        DrawSurf.blit(font.render(press, True, (255, 255, 255)), (0, 50))
+        DrawSurf.blit(font.render(press, True, (255, 255, 255)), (0, 100))
 
         #writes the current humidity display
-        DrawSurf.blit(font.render(humid, True, (255, 255, 255)), (0, 100))
+        DrawSurf.blit(font.render(humid, True, (255, 255, 255)), (0, 200))
 
         #draws the buffered dispaly to the screen after resizing it
         screen.blit(pygame.transform.scale(DrawSurf, screenSize), (0, 0))
