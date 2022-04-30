@@ -40,6 +40,9 @@ pygame.display.toggle_fullscreen()
 #reads the batsignal image from file "BatSignal.png"
 BatSignal = pygame.image.load("BatSignal.png")
 
+#a variable to store the current operating mode
+mode = "Loading"
+
 #loops for as only as the program runs
 while True:
 
