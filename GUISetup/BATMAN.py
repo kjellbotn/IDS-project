@@ -107,8 +107,19 @@ while True:
         #clears the displaySurface
         DrawSurf.fill((0, 0, 0))
 
-        #draws the test text
-        DrawSurf.blit(font.render("Hello", True, (255, 255, 255)), (900, 400))
+        #reads data from sensors and changes it to a string
+        temp = "BME Temperature: " + bme280.temperature
+        press = "BME Pressure: " + bme280.pressure
+        humid = "BME Humidity: " + bme280.humidity
+
+        #writes the current temperature display
+        DrawSurf.blit(font.render(temp, True, (255, 255, 255)), (0, 0))
+
+        #writes the current pressure display
+        DrawSurf.blit(font.render(press, True, (255, 255, 255)), (0, 50))
+
+        #writes the current humidity display
+        DrawSurf.blit(font.render(humid, True, (255, 255, 255)), (0, 100))
 
         #draws the buffered dispaly to the screen after resizing it
         screen.blit(pygame.transform.scale(DrawSurf, screenSize), (0, 0))
