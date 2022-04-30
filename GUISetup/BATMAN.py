@@ -14,7 +14,7 @@ pygame.init()
 i2c = board.I2C()
 
 #defines the BME
-bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
+bme280 = BME280.Adafruit_BME280_I2C(i2c)
 
 #reads current desktop size
 screenInfo = pygame.display.Info()
