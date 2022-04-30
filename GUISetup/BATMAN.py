@@ -108,9 +108,9 @@ while True:
         DrawSurf.fill((0, 0, 0))
 
         #reads data from sensors and changes it to a string
-        temp = "BME Temperature: " + bme280.temperature
-        press = "BME Pressure: " + bme280.pressure
-        humid = "BME Humidity: " + bme280.humidity
+        temp = "BME Temperature: " + str(bme280.temperature)
+        press = "BME Pressure: " + str(bme280.pressure)
+        humid = "BME Humidity: " + str(bme280.humidity)
 
         #writes the current temperature display
         DrawSurf.blit(font.render(temp, True, (255, 255, 255)), (0, 0))
