@@ -63,7 +63,7 @@ while True:
                     pygame.quit()
                     sys.exit()
 
-                elif(event.key == pygame.K_ENTER):
+                elif(event.key == pygame.K_RETURN):
 
                     #tell the program to start reading data
                     mode = "Reading Data"
