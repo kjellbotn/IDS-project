@@ -30,7 +30,8 @@ DrawSurf = pygame.Surface((1920, 1080))
 
 #generates a phont to write text with
 #best p052
-font = pygame.font.SysFont("omni10", 35);
+#font = pygame.font.SysFont("omni10", 35);
+font = pygame.font.Font("Qdbettercomicsans-jEEeG.ttf", 35)
 
 #adds a title for the window
 pygame.display.set_caption("Caption?")
