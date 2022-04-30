@@ -29,7 +29,8 @@ screen = pygame.display.set_mode(screenSize)
 DrawSurf = pygame.Surface((1920, 1080))
 
 #generates a phont to write text with
-font = pygame.font.SysFont("nototraditionalnushu", 35);
+#best p052
+font = pygame.font.SysFont("omni10", 35);
 
 #adds a title for the window
 pygame.display.set_caption("Caption?")
