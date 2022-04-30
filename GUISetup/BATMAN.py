@@ -113,13 +113,13 @@ while True:
         humid = "BME Humidity: " + str(bme280.humidity)
 
         #writes the current temperature display
-        DrawSurf.blit(font.render(temp, True, (255, 255, 255)), (0, 0))
+        DrawSurf.blit(font.render(temp, True, (255, 255, 255)), (50, 50))
 
         #writes the current pressure display
-        DrawSurf.blit(font.render(press, True, (255, 255, 255)), (0, 100))
+        DrawSurf.blit(font.render(press, True, (255, 255, 255)), (50, 150))
 
         #writes the current humidity display
-        DrawSurf.blit(font.render(humid, True, (255, 255, 255)), (0, 200))
+        DrawSurf.blit(font.render(humid, True, (255, 255, 255)), (50, 250))
 
         #draws the buffered dispaly to the screen after resizing it
         screen.blit(pygame.transform.scale(DrawSurf, screenSize), (0, 0))
