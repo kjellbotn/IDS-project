@@ -23,7 +23,7 @@ def readRaw():
     #returns read lines
     return(lines)
 
-def readTemp()
+def readTemp():
     #reads raw temp data
     lines = readRaw()
     #loops until reading works
