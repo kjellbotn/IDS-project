@@ -37,7 +37,7 @@ font = pygame.font.Font("Qdbettercomicsans-jEEeG.ttf", 70)
 pygame.display.set_caption("Caption?")
 
 #enables fullscreen
-#pygame.display.toggle_fullscreen()
+pygame.display.toggle_fullscreen()
 
 #reads the batsignal image from file "BatSignal.png"
 BatSignal = pygame.image.load("BatSignal.png")
