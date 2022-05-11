@@ -90,10 +90,15 @@ BatSignal = pygame.image.load("BatSignal.png")
 #a variable to store the current operating mode
 mode = "Loading"
 
+counter = 0
+
 #loops for as only as the program runs
 while True:
 
     while mode == "Loading":
+        if counter == 40:
+            mode = "Reading Data"
+
         #loops for each pygame event
         for event in pygame.event.get():
             #checks for quit event
@@ -126,6 +131,8 @@ while True:
 
         #updates the display
         pygame.display.update()
+
+        counter += 1
 
         #waits to add delay for the next frame
         time.sleep(0.01)
